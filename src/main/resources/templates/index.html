@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PH Personal Trainer</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- Cabeçalho: Logo -->
+<header>
+    <img src="/images/logo.jpeg" alt="PH Personal Trainer" width="150">
+</header>
+<hr>
+<!-- Botão Começar Hoje (topo) -->
+<section>
+    <a href="#formulario">
+        <button type="button">COMEÇAR HOJE</button>
+    </a>
+</section>
+
+<!-- Biografia -->
+<section>
+    <h2>Biografia</h2>
+    <div class="biografia-container">
+        <img src="/images/imgBiografia.jpeg" alt="Foto do Personal" width="400" class="imgBiografia">
+        <div class="biografia-texto">
+        <p>
+            Me chamo Pedro (PH), sou formado em Educação Física e atuo como personal trainer online, com foco especial no treinamento para mulheres com lipedema.
+            Movido pela paixão pelo esporte desde a infância, acredito na sua capacidade de transformar vidas.
+        </p>
+
+        <p>
+            A prática regular de atividade física vai além da estética: previne doenças cardiovasculares e crônicas (como diabetes e hipertensão),
+            fortalece ossos e músculos e combate os impactos do sedentarismo e da tecnologia no público jovem.
+            Além dos ganhos físicos, é uma ferramenta fundamental para melhorar a autoestima e controlar o estresse, a ansiedade e a depressão.
+        <p>
+            Ter o acompanhamento profissional de um personal trainer garante segurança, correção técnica e treinos individualizados, acelerando os resultados de forma consistente.
+            Quando aliado à orientação nutricional (ou a hábitos alimentares mais conscientes), o desempenho e a saúde se potencializam ainda mais.
+        </p>
+
+        <p>
+            Cuidar do corpo e da saúde exige sair da zona de conforto.
+            Sozinho o caminho pode parecer difícil, mas com o suporte certo ele se torna totalmente possível.
+        </p>
+
+        <p>
+            Um desejo não muda nada, mas uma decisão muda tudo.
+        </p>
+        </div>
+    </div>
+</section>
+
+<!-- Botão Começar Hoje (após biografia) -->
+<section>
+    <a href="#formulario">
+        <button type="button">COMEÇAR HOJE</button>
+    </a>
+</section>
+
+<!-- Especializações -->
+<section>
+    <div class="especializacoes-wrapper">
+        <h2 class="especializacoes-titulo">Especializações</h2>
+        <div class="especializacoes-container">
+            <div class="especializacoes-texto">
+                <p>
+                    Como personal trainer especialista em Educação Física e no atendimento a mulheres com lipedema,
+                    compreendo de perto os desafios de conviver com o excesso de peso, a sensibilidade ao toque,
+                    o cansaço constante e aquela gordura localizada nos braços e pernas que parece não responder aos treinos tradicionais.
+                    Meu trabalho é oferecer um acompanhamento direcionado e seguro, utilizando o exercício físico como a principal ferramenta para combater
+                    a inflamação, diminuir o inchaço, aliviar a dor muscular e promover o emagrecimento definitivo —
+                    permitindo que você reconquiste seu bem-estar, a leveza nas pernas e a confiança ao se olhar no espelho.
+                </p>
+            </div>
+            <ul>
+                <li>✅ Treino individualizado</li>
+                <li>✅ Evolução consistente</li>
+                <li>✅ Adaptações</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Formulário -->
+<section id="formulario">
+    <h2>Informações Chave</h2>
+    <div class="formulario-container" style="display: flex; gap: 20px;">
+        <form style="flex: 1;">
+            <label>Nome completo</label><br>
+            <input type="text" id="nome" placeholder="Seu nome" required><br><br>
+
+            <label>Objetivo</label><br>
+            <select id="objetivo" required>
+                <option value="" disabled selected>Selecione o seu objetivo</option>
+                <option value="Lipedema">Lipedema</option>
+                <option value="Hipertrofia">Hipertrofia</option>
+                <option value="Emagrecimento">Emagrecimento</option>
+                <option value="Condicionamento físico">Condicionamento físico</option>
+            </select><br><br>
+
+            <label>Restrições Corporais</label><br>
+            <input type="text" id="restricao" placeholder="ex:Nenhuma, joelho, ombro" required><br><br>
+
+
+            <button type="button" onclick="enviarWhatsApp()">COMEÇAR HOJE</button>
+        </form>
+
+        <div style="flex: 1;">
+            <img src="/images/imgFormulario.jpeg" alt="PH Personal Trainer" width="400" class="imgFormulario">
+        </div>
+    </div>
+</section>
+
+<script>
+    function enviarWhatsApp() {
+        const nome = document.getElementById('nome').value;
+        const objetivo = document.getElementById('objetivo').value;
+        const restricao = document.getElementById('restricao').value;
+
+        if (!nome || !objetivo || !restricao) {
+            alert('Por favor, preencha todos os campos antes de continuar.');
+            return;
+        }
+
+        const mensagem = `Olá! Meu nome é ${nome}. Tenho interesse em treino de ${objetivo}, a(as) minhas restrições é(são) ${restricao}`;
+
+        const numeroWhatsApp = "5511999999999";
+        const link = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+        window.open(link, '_blank');
+    }
+</script>
+
+<!-- Perguntas Frequentes -->
+<section>
+    <h2>Perguntas Frequentes</h2>
+
+    <details class="faq-item">
+        <summary>Garantia</summary>
+        <p>Reembolso até 7 dias a partir do fechamento do plano.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Resultado</summary>
+        <p>Tempo certo, respeitando o limite do seu corpo e buscando a sua melhor performance.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Por que me escolher?</summary>
+        <p>Ao me escolher como seu personal trainer, você garante um acompanhamento seguro, científico e totalmente individualizado, seja no formato presencial ou online. Com formação em Licenciatura e Bacharelado em Educação Física e especial atenção ao treinamento para mulheres com lipedema, meu foco vai além da estética: construo treinos sob medida que previnem lesões, melhoram sua saúde mental e aceleram seus resultados com técnica, motivação e constância.</p>
+    </details>
+</section>
+
+<!-- Rodapé -->
+<footer>
+    <div class="footer-content">
+        <p class="footer-titulo">PH Personal Trainer</p>
+        <div class="footer-links">
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1%20Pedro%2C%20eu%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20consultoria" target="_blank">📱 WhatsApp</a>
+            <a href="mailto:email@teste.com">✉️ E-mail</a>
+            <a href="https://instagram.com/testeinstagram" target="_blank">📷 Instagram</a>
+        </div>
+        <p class="footer-credito">Site criado por: João Guilherme de Oliveira Colturato</p>
+    </div>
+</footer>
+
+</body>
+</html>

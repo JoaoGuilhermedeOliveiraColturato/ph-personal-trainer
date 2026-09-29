@@ -1,0 +1,245 @@
+/* ===== Variáveis de cor (baseadas na logo PH Personal Trainer) ===== */
+:root {
+    --azul-marinho: #0A1F3D;
+    --azul-medio: #1E4D8C;
+    --prata: #9BA4AD;
+    --prata-claro: #C8D0D8;
+    --dourado: #D4A94A;
+    --dourado-escuro: #B8860B;
+    --branco: #F5F7FA;
+}
+
+/* ===== Importação de fontes (Google Fonts) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--branco);
+    text-align: center;
+}
+
+a {
+    color: var(--dourado);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dourado-escuro);
+}
+
+/* ===== Cabeçalho (Logo) ===== */
+header {
+    display: flex;
+    align-items: center;
+    padding: 24px 40px;
+    justify-content: center;
+}
+
+header img {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(212, 169, 74, 0.3);
+}
+
+/* ===== Botões "Começar Hoje" ===== */
+button {
+    background: linear-gradient(135deg, var(--dourado), var(--dourado-escuro));
+    color: var(--azul-marinho);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 16px 60px;
+    min-width: 280px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 169, 74, 0.5);
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+.biografia-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.biografia-texto p {
+    text-align: justify;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+.especializacoes-wrapper {
+    max-width: 100%;
+}
+
+.especializacoes-titulo {
+    text-align: left;
+}
+
+.especializacoes-container {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.especializacoes-texto {
+    background: rgba(30, 77, 140, 0.15);
+    border: 1px solid var(--azul-medio);
+    border-radius: 8px;
+    padding: 24px;
+    flex: 1;
+    text-align: left;
+}
+
+.especializacoes-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    flex: 1;
+}
+
+.especializacoes-container li {
+    background: rgba(30, 77, 140, 0.3);
+    border: 1px solid var(--azul-medio);
+    border-radius: 8px;
+    padding: 14px 20px;
+    text-align: left;
+}
+
+.formulario-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.formulario-container form {
+    background: rgba(30, 77, 140, 0.15);
+    border: 1px solid var(--azul-medio);
+    border-radius: 16px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.formulario-container input,
+.formulario-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    border: 1px solid var(--prata);
+    background: var(--azul-marinho);
+    color: var(--branco);
+}
+
+.formulario-container label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.faq-item {
+    background: rgba(30, 77, 140, 0.15);
+    border: 1px solid var(--azul-medio);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.faq-item summary {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--dourado);
+}
+
+.faq-item p {
+    margin-top: 12px;
+}
+
+header img {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(212, 169, 74, 0.3);
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.imgFormulario {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(212, 169, 74, 0.3);
+}
+.imgBiografia,
+header img {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(212, 169, 74, 0.3);
+    object-fit: cover;
+}
+
+/* ===== Rodapé ===== */
+footer {
+    background: rgba(30, 77, 140, 0.2);
+    border-top: 2px solid var(--dourado);
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-titulo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: var(--dourado);
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: var(--branco);
+    font-size: 15px;
+}
+
+.footer-links a:hover {
+    color: var(--dourado);
+}
+
+.footer-credito {
+    font-size: 12px;
+    color: var(--prata);
+    margin-top: 20px;
+}
+
